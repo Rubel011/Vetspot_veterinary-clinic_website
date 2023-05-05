@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Appointment System</title>
+	<link rel="stylesheet" type="text/css" href="./styles/appointment.css">
+	<script src="./scripts/appointment.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Veterinary Appointment System</h1>
+	</header>
+	<main>
+		<form>
+			<label for="pet-name">Pet Name:</label>
+			<input type="text" id="pet-name" name="pet-name" required><br>
+
+			<label for="owner-name">Owner Name:</label>
+			<input type="text" id="owner-name" name="owner-name" required><br>
+
+			<label for="phone-number">Phone Number:</label>
+			<input type="tel" id="phone-number" name="phone-number" required><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required><br>
+
+			<label for="appointment-date">Appointment Date:</label>
+			<input type="date" id="appointment-date" name="appointment-date" required><br>
+
+			<label for="appointment-time">Appointment Time:</label>
+			<input type="time" id="appointment-time" name="appointment-time" required><br>
+
+			<label for="reason-for-visit">Reason for Visit:</label>
+			<textarea id="reason-for-visit" name="reason-for-visit" rows="5" required></textarea><br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 Veterinary Appointment System</p>
+	</footer>
+</body>
+</html>
