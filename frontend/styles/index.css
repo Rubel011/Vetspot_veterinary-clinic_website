@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* =================== Hero Section ======================== */
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f7ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section-div {
+    /* border: 1px solid; */
+    width: 45%;
+    margin-left: 152px;
+    position: absolute;
+    left: 0px;
+}
+
+.hero-section-div h5 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    font-weight: 300;
+    color: #4b5563;
+}
+
+.hero-section-div h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    background: rgb(89, 79, 234);
+    background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.hero-section-div p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.hero-section-div a {
+    background: linear-gradient(to right, #e54391 0%, #c0135f 100%);
+    width: 320px;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.hero-section-img {
+    width: 50%;
+    height: 100%;
+    background-image: url(../assets/vetster-telemedicine-app.webp);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+
+.book-with-confidence {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.book-with-confidence-innerText {
+    max-width: 700px;
+    margin: 60px auto;
+    font-size: 30px;
+    line-height: 36px;
+    color: #5e5f6c;
+}
+
+.book-with-confidence-innerText>p>span {
+    color: #544dcf;
+    font-weight: 500;
+}
+
+.book-with-confidence-innerDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 25px;
+    padding: 10px 20px;
+}
+
+.book-with-confidence-innerDiv img {
+    margin-bottom: 50px;
+}
+
+.book-with-confidence-innerDiv h3 {
+    font-size: 20px;
+    line-height: 26px;
+    color: #252f3f;
+    padding: 16px 0;
+    font-weight: 500;
+}
+
+.book-with-confidence-innerDiv p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #374151;
+}
+
+.book-with-confidence>p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #374151;
+    margin: 20px auto;
+}
+
+.banner-div {
+    width: 80%;
+    min-height: 200px;
+    margin: 80px auto;
+    background: rgb(228, 70, 144);
+    background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%);
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+.banner-div div img {
+    width: 180px;
+}
+
+.banner-innerDiv {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.banner-innerDiv h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.banner-innerDiv p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px auto;
+}
+
+.pet-parents {
+    text-align: center;
+}
+
+.pet-parents h1 {
+    font-size: 48px;
+    letter-spacing: -1.2px;
+    background: rgb(89, 79, 234);
+    background: linear-gradient(90deg, #c0135f 0%, #544dcf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pet-parents div {
+    width: 46%;
+    margin: 20px auto;
+}
+
+.pet-parents div p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    font-weight: 300;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+#logos-home-page {
+    width: 100%;
+    /* margin-bottom: 500px; */
+}
+
+
+#logos-home-page .slider {
+    /* height: 800px; */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#logos-home-page .slider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#logos-home-page .slider:before {
+    left: 0;
+    top: 0;
+}
+
+#logos-home-page .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 8);
+    gap: 30px;
+}
+
+.slide {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.ratings i {
+    font-size: 18px;
+    margin: 20px 3px;
+    color: #e54391;
+}
+
+.slide-innerText {
+    line-height: 24px;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.circle {
+    border-radius: 50%;
+    background: rgb(102, 109, 239);
+    background: linear-gradient(90deg, rgba(102, 109, 239, 1) 0%, rgba(87, 41, 187, 1) 100%);
+    margin-right: 10px;
+}
+
+.circle i {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.rater {
+    display: flex;
+    align-items: center;
+}
+
+.raterDetail {
+    text-align: left;
+}
+
+.raterDetail h4 {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+
+.raterDetail p {
+    color: #5e5f6c;
+}
+
+.pet-connection {
+    width: 85%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.pet-connection h1 {
+    font-size: 48px;
+    letter-spacing: -1.2px;
+    background: #83dfbd;
+    background: linear-gradient(90deg, #0051ff 0%, #00ffa2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pet-connection-innerDiv {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.pet-connection>div>p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    font-weight: 300;
+}
+
+.pet-connection>div>p>span {
+    color: #544dcf;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.grid-card>div {
+    padding: 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.grid-card>div:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+    transition: .5s;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 250px;
+}
+
+.grid-card>div>h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px auto;
+    color: #161e2e;
+}
+
+.grid-card>div>p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.grid-card>div>a {
+    text-decoration: none;
+    color: #c0135f;
+}
+
+.grid-card>div>a:hover {
+    color: #0051ff;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 40px;
+    }
+
+    .hero-section-div a {
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .hero-section-img {
+        display: none;
+        position: relative;
+    }
+
+    .book-with-confidence-innerDiv {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .banner-div {
+        flex-direction: column;
+    }
+
+    .banner-innerDiv {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .banner-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 600px) {
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .hero-section-div h5 {
+        font-size: 45px;
+        line-height: 40px;
+    }
+
+    .hero-section-div h1 {
+        font-size: 45px;
+        line-height: 40px;
+    }
+
+    .hero-section-div p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .hero-section-div a {
+        width: 260px;
+        padding: 16px 10px;
+        border-radius: 6px;
+        font-size: 18px;
+    }
+
+    .banner-div {
+        flex-direction: column;
+    }
+
+    .banner-innerDiv {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .banner-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .pet-parents h1 {
+        font-size: 38px;
+    }
+
+    .pet-parents div {
+        width: 90%;
+    }
+
+    .book-with-confidence-innerText {
+        font-size: 24px;
+    }
+
+    .pet-connection-innerDiv {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .hero-section-div h5 {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    .hero-section-div h1 {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    .hero-section-div p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .hero-section-div a {
+        width: 200px;
+        padding: 16px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        margin: 30px auto;
+    }
+
+    .book-with-confidence-innerText {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .book-with-confidence-innerDiv {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 25px;
+        padding: 10px 20px;
+    }
+
+    .pet-parents h1 {
+        font-size: 34px;
+    }
+
+    .pet-parents div {
+        width: 90%;
+    }
+
+    .pet-parents div p {
+        font-size: 16px;
+    }
+
+    .pet-connection-innerDiv {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 200px) {
+    .hero-section-div {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .hero-section-div h5 {
+        font-size: 33px;
+        line-height: 40px;
+    }
+
+    .hero-section-div h1 {
+        font-size: 33px;
+        line-height: 40px;
+    }
+
+    .hero-section-div p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .hero-section-div a {
+        width: 180px;
+        padding: 16px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin: 20px auto;
+    }
+
+    .book-with-confidence-innerText {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .book-with-confidence-innerDiv {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 25px;
+        padding: 10px 0px;
+    }
+
+    .book-with-confidence-innerDiv img {
+        width: 200px;
+    }
+
+    .book-with-confidence-innerDiv h3 {
+        font-size: 18px;
+    }
+
+    .book-with-confidence-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .book-with-confidence>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .banner-div {
+        padding: 10px 15px;
+    }
+
+    .banner-innerDiv h3 {
+        font-size: 18px;
+    }
+
+    .banner-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .pet-parents h1 {
+        font-size: 24px;
+    }
+
+    .pet-parents div {
+        width: 90%;
+    }
+
+    .pet-parents div p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .pet-connection h1 {
+        font-size: 24px;
+    }
+
+    .pet-connection-innerDiv {
+        width: 90%;
+    }
+
+    .pet-connection>div>p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .grid {
+        padding: 10px 0px;
+    }
+
+    .grid-card>div>h3 {
+        font-size: 18px;
+        list-style: 20px;
+    }
+
+    .grid-card>div>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .grid-card>div>a {
+        font-size: 14px;
+    }
+}
