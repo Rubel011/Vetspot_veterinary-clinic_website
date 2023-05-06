@@ -1,8 +1,29 @@
 header {
-	background-color: #4CAF50;
+	width:100%;
+	background-color: #544dcf;
 	color: white;
 	text-align: center;
 	padding: 20px;
+}
+.main{
+	width:80%;
+	margin: auto;
+	display:flex;
+	flex-direction: row;
+
+}
+.form{
+	width:100%;
+	padding-left: 10px;
+	
+}
+.page{
+	width:100%;
+	
+}
+.page>img{
+	width:100%;
+	margin-top: 20%;
 }
 
 form {
@@ -25,7 +46,8 @@ input[type="text"], input[type="tel"], input[type="email"], textarea, input[type
 }
 
 input[type="submit"] {
-	background-color: #4CAF50;
+	width: 70%;
+	background-color: #544dcf;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -34,5 +56,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	background-color: #45a049;
+	background-color: #544dcf;
+}
+footer>p{
+	text-align: center;
+	
 }
