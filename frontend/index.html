@@ -1,14 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>24/7 Online Vet Appointments - Ask a Vet - Vetcare(Global)</title>
+    <link rel="shortcut icon" href="./images/Vetspotlogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+
+    <!-- ======================================= Fontawesome ========================================== -->
+    <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
-    
+    <!-- Navbar Start -->
+    <div id="navbar"></div>
+
+
+    <!-- =========================================== Hero Section =========================================== -->
+
+    <div class="hero-section">
+        <div class="hero-section-div">
+            <h5>On-demand</h5>
+            <h1>Online vet appointments.</h1>
+            <p>VetCare connects pet owners to thousands of licenced veterinary surgeons & nurses ready to provide the
+                best online vet services through video chat appointments 24/7.</p>
+            <div id="redirectBtn"></div>
+        </div>
+        <div class="hero-section-img">
+
+        </div>
+    </div>
+
+
+    <!-- ================================== Book with confidence Section ==================================== -->
+
+    <div class="book-with-confidence">
+        <div class="book-with-confidence-innerText">
+            <p><span>Book with confidence. </span> Licensed veterinarians* to help you manage your pets health.</p>
+        </div>
+        <div class="book-with-confidence-innerDiv">
+            <div class="book-card">
+                <img src="https://cloud.vetster.com/images/vetster-vet-video-appt.svg" alt="">
+                <h3>Convenience for when you have a pet health concern</h3>
+                <p>If you are unable or if visiting your local clinic is challenging for you, we're here for all your
+                    pet health concerns, big or small.</p>
+            </div>
+            <div class="book-card">
+                <img src="https://cloud.vetster.com/images/vetster-phone-vet.svg" alt="">
+                <h3>Here when you need us with 24/7 online veterinary telehealth consult</h3>
+                <p>Vetcare has online vets available 24/7. We're here to help answer your questions, provide teletriage
+                    service, and help you with next steps for your pet.</p>
+            </div>
+            <div class="book-card">
+                <img src="https://cloud.vetster.com/images/vetster-user-with-pet.svg" alt="">
+                <h3>Simple, easy-to-use care solution from the comfort of your home</h3>
+                <p>Using Vetcare makes it easy for you to see a vet from the comfort of your own home. With Vetcare you
+                    and your pet can be stress free!</p>
+            </div>
+        </div>
+        <p>Video chat appointments will be facilitated with a veterinarian licensed in Canada, the United Kingdom or the
+            US. Prescriptions and diagnosis are not available.</p>
+    </div>
+
+<!-- <img src="./images/Vetspotlogo.jpg" alt=""> -->
+    <!-- ================================== Banner Section ==================================== -->
+
+    <div class="banner-div flex">
+        <div>
+            <img src="https://cloud.vetster.com/images/vetster-phone-vet.svg" alt="">
+        </div>
+        <div class="banner-innerDiv">
+            <h3>What can virtual vets help you with?</h3>
+            <p>Vets in Canada, United Kingdom and the US can talk you through a variety of health issues and offer
+                guidance for taking care of your pet. Vetster veterinarians can work with new and existing patients to
+                understand health and wellness issues, and in some cases they may suggest over-the-counter products, or
+                provide you with peace of mind knowing your pet is in good hands.</p>
+        </div>
+    </div>
+
+
+    <!-- ========================================== Pet parents section ==================================== -->
+
+    <div class="pet-parents">
+        <h1>Pet parents love what we do!</h1>
+        <div>
+            <p>Using Vetcare is simple and enjoyable! Here is what some our satisfied pet parents have to say…</p>
+        </div>
+        <div id="logos-home-page">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p style="font-size: 16px; height: 120px;">“I am not in a position where I can go to a vet
+                            during the week so
+                            having this appointment
+                            was very helpful.
+                            Dr Martin was very professional and friend...”</p>
+
+                        <div class="rater">
+                            <div class="circle flex" style="width: 50px; height: 50px;"><i class="fa-solid fa-h"></i>
+                            </div>
+                            <div class="raterDetail">
+                                <h4>Hannah</h4>
+                                <p style="font-size: 12px; width: 100px;">March 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p style="font-size: 16px; height: 120px;">“Very professional, kind, warm and knowledgeable
+                            doctor. Highly
+                            recommend”</p>
+
+                        <div class="rater">
+                            <div class="circle flex" style="width: 50px; height: 50px;"><i class="fa-solid fa-j"></i>
+                            </div>
+                            <div class="raterDetail">
+                                <h4>Justyna</h4>
+                                <p style="font-size: 12px; width: 100px;">December 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p style="font-size: 16px; height: 120px;">“The doctor was very helpful and gave me some great
+                            advice. I’d be happy to use her again.”</p>
+
+                        <div class="rater">
+                            <div class="circle flex" style="width: 50px; height: 50px;"><i class="fa-solid fa-m"></i>
+                            </div>
+                            <div class="raterDetail">
+                                <h4>Mimi</h4>
+                                <p style="font-size: 12px; width: 100px;">February 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p style="font-size: 16px; height: 120px;">“I lost the connection, but the appointment went
+                            well. Will be baiting for a medicine name. Please, could you Send it via my email? Kind
+                            regards, Iry...”</p>
+
+                        <div class="rater">
+                            <div class="circle flex" style="width: 50px; height: 50px;"><i class="fa-solid fa-i"></i>
+                            </div>
+                            <div class="raterDetail">
+                                <h4>Iryna</h4>
+                                <p style="font-size: 12px; width: 100px;">January 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p style="font-size: 16px; height: 120px;">“Would highly recommend Joanna, she was very patient
+                            and listened and assessed our little French bulldog. Would definitely recommend for peace of
+                            min...”</p>
+
+                        <div class="rater">
+                            <div class="circle flex" style="width: 50px; height: 50px;"><i class="fa-solid fa-n"></i>
+                            </div>
+                            <div class="raterDetail">
+                                <h4>Noreen</h4>
+                                <p style="font-size: 12px; width: 100px;">December 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== Pet connection section ==================================== -->
+
+    <div class="pet-connection">
+        <h1>Pet Connection</h1>
+        <div class="pet-connection-innerDiv">
+            <p>Explore our curated collection of pet telehealth & news, articles and blog posts. <span>More pet
+                    resources →</span> </p>
+        </div>
+
+        <div class="grid">
+            <div class="grid-card">
+                <img src="https://images.vetster.com/grey_cat_being_petted_fb599118c3.jpg" alt="">
+                <div>
+                    <span>WELLNESS</span>
+                    <h3>Preventative wellness tips for your cat</h3>
+                    <p>There are many ways you can improve your cat’s physical and mental state. Annual veterinary
+                        exams, staying up to date on vaccines,</p>
+
+                    <a href="#">Learn more →</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img src="https://images.vetster.com/puppy_eating_from_bowl_0db6a6081d.jpg" alt="">
+                <div>
+                    <span>BLOG</span>
+                    <h3>Preventative wellness tips for your cat</h3>
+                    <p>There are many ways you can improve your cat’s physical and mental state. Annual veterinary
+                        exams, staying up to date on vaccines,</p>
+                    <a href="#">Learn more →</a>
+                </div>
+            </div>
+            <div class="grid-card">
+                <img src="https://images.vetster.com/General_Advice_and_Guidance_in_Virtual_Care_USA_CAN_3a5476d52e.jpg"
+                    alt="">
+                <div>
+                    <span>WELLNESS</span>
+                    <h3>Preventative wellness tips for your cat</h3>
+                    <p>There are many ways you can improve your cat’s physical and mental state. Annual veterinary
+                        exams, staying up to date on vaccines,</p>
+                    <a href="#">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer start -->
+    <div id="footer"></div>
+
 </body>
+
 </html>
-<script src="./scripts/index.js"></script>
+
+<script src="./scripts/index.js" type="module"></script>
