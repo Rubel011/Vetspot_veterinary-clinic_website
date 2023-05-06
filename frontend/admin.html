@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="./styles/admin.css">
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <table id="todosTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <!-- <form id="addTodoForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <button type="submit">Add Todo</button>
+    </form> -->
+    <div id="editTodoModal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Todo</h2>
+            <form id="editTodoForm">
+                <label for="editTitle">Title:</label>
+                <input type="text" id="editTitle" name="title">
+                <input type="hidden" id="editTodoId" name="id">
+                <button type="submit">Save</button>
+                <button id="closeEditModal" type="button">Close</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
+<script src="./scripts/admin.js"></script>
