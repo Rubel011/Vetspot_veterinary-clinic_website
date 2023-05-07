@@ -7,41 +7,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
     <link rel="stylesheet" href="./styles/admin.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 </head>
 
 <body>
-    <h1>User Details</h1>
-    <table id="todosTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
 
-        </tbody>
-    </table>
-    <!-- <form id="addTodoForm">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
-        <button type="submit">Add Todo</button>
-    </form> -->
-    <div id="editTodoModal" class="modal">
-        <div class="modal-content">
-            <h2>Edit Todo</h2>
-            <form id="editTodoForm">
-                <label for="editTitle">Title:</label>
-                <input type="text" id="editTitle" name="title">
-                <input type="hidden" id="editTodoId" name="id">
-                <button type="submit">Save</button>
-                <button id="closeEditModal" type="button">Close</button>
-            </form>
+    <!-- <hr> -->
+    <div id="container">
+
+        <div id="firstdiv">
+            <button onclick="myFunction()">dark mode</button>
+            <hr>
+            <div onclick="userdiv()">
+                <h1>User</h1>
+            </div>
+            <hr>
+            <div onclick="doctordiv()">
+                <h1>doctor</h1>
+            </div>
+            <hr>
+            <div onclick="appointmentdiv()">
+                <h1>appointment</h1>
+            </div>
+            <hr>
+            <button id="openFormButton">User add</button>
+            <div id="loginFormContainer" style="display: none;">
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="name" placeholder="Enter your username">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div id="seconddiv" >
+            <div style="display: block" id="userdiv">
+                <h1> User Details</h1>
+                <hr>
+
+                <h1>Total user: <span id="totaluser">0</span></h1>
+                <!-- <button id="openSwalButton">Open Swal</button> -->
+                <div>
+                    <table id="todosTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="display: none" id="doctordiv">
+                <h1> doctor Details</h1>
+                <hr>
+
+                <h1>Total user: <span id="totaluser">0</span></h1>
+                <!-- <button id="openSwalButton">Open Swal</button> -->
+                <div>
+                    <table id="todosTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div style="display: none" id="appointmentdiv">
+                <h1> appointment Details</h1>
+                <hr>
+
+                <h1>Total user: <span id="totaluser">0</span></h1>
+                <!-- <button id="openSwalButton">Open Swal</button> -->
+                <div>
+                    <table id="todosTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- <script src="script.js"></script> -->
+
 </body>
 
 </html>
