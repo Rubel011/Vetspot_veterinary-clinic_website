@@ -33,7 +33,8 @@ const username = usernameInput.value;
         })
         .then(res=>res.json())
             .then(res=>{
-                console.log(res)
+              
+                localStorage.setItem("token",res.Token)
                 if(res.err){
                     // alert(res.err)
                     Swal.fire({
@@ -51,7 +52,7 @@ const username = usernameInput.value;
                       )
                       setTimeout(()=>{
                         window.location.href="index.html"
-                      },2500)
+                      },1000)
 
                    
                 }
