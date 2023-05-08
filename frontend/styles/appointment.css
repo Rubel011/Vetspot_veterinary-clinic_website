@@ -7,7 +7,7 @@ header {
 }
 .main{
 	width:80%;
-	margin: auto;
+	margin: 138px 0px 0px 142px;
 	display:flex;
 	flex-direction: row;
 
@@ -62,3 +62,9 @@ footer>p{
 	text-align: center;
 	
 }
+
+
+
+
+
+

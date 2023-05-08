@@ -34,3 +34,10 @@
 #logo {
     padding: 6px;
 }
+/* #navUL{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    margin: 0px 0px 0px 132px;
+  
+} */
