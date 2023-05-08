@@ -17,12 +17,12 @@ let btn=document.getElementById("redirectBtn");
 
 // setting username
 let userDetails = JSON.parse(localStorage.getItem("userDetails")) || null;
-console.log(userDetails.name)
 let div=document.getElementById("redirectBtn");
 if (userDetails) {
-  // document.getElementById("user").innerText = userDetails?.name;
+  // console.log(userDetails.name)
+  document.getElementById("userName").innerText = `👏Hi, ${userDetails?.name}`;
   document.getElementById("loginbtn").innerText = "Logout";
-  div.innerHTML=`<a href="./appointment_form.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
+  div.innerHTML=`<a href="./appointment.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
 }else{
   div.innerHTML=`<a href="#" class="flex" id="chhodyar"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
   let temp=document.getElementById("chhodyar");
@@ -46,7 +46,7 @@ let navRedirect = document.getElementById("navredirect");
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
 
-    window.location.href = "appointment_form.html";
+    window.location.href = "appointment.html";
     
   } else {
     Swal.fire({
@@ -61,7 +61,8 @@ navRedirect.addEventListener("click", () => {
 login_icon.addEventListener("click", () => {
   if (userDetails) {
     localStorage.removeItem("userDetails");
-    window.location.href = "login.html";
+    localStorage.removeItem("token");
+    window.location.href = "index.html";
     
   } else {
     window.location.href = "login.html";
