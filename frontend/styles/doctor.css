@@ -1,0 +1,146 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dashboard p:hover {
+  cursor: pointer;
+}
+
+#container {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  /* background-color: black; */
+}
+
+#dashboard-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+.ancer-btn {
+  border: 1px solid black;
+  margin-bottom: -10px;
+  background-color: white;
+  color: black;
+  font-family: monospace;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.ancer-btn {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.ancer-btn:hover {
+  background: black;
+  color: #f2f8fd;
+  transform: translateY(-3px);
+}
+
+#card-section {
+  width: 77%;
+  float: right;
+  /* background-color: navajowhite; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(3,1fr); */
+  gap: 10px;
+}
+
+
+.card {
+  /* border: 1px solid red; */
+  min-height: 300px;
+  max-height: 300px;
+  background-color: #f2f8fd;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.image-div {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.name-info {
+  text-align: start;
+  width: 100%;
+}
+
+.image-left img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10%;
+}
+
+.image-left p {
+  color: gray;
+  font-size: small;
+}
+.image-left h {
+  color: black;
+}
+
+.menu {
+  margin-top: 8px;
+  font-size: larger;
+  font-weight: bolder;
+  padding-right:20px;
+}
+
+.InfoImg {
+  width: 90%;
+  margin-left: 2%;
+  margin-right: 2%;
+  min-height: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 35px;
+  background-color: #ffffff;
+}
+
+.image-left {
+  padding-left: 20px;
+}
+
+.InfoImgMid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.InfoImgMid p {
+  color: gray;
+  font-size: small;
+  font-weight: bold;
+}
+
+.InfoImgbottom img {
+  width: 6%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.InfoImgbottom h4 {
+  display: flex;
+  align-items: center;
+}
