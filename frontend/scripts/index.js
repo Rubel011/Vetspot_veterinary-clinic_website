@@ -17,10 +17,10 @@ let btn=document.getElementById("redirectBtn");
 
 // setting username
 let userDetails = JSON.parse(localStorage.getItem("userDetails")) || null;
-
+console.log(userDetails.name)
 let div=document.getElementById("redirectBtn");
 if (userDetails) {
-  document.getElementById("user").innerText = userDetails?.name;
+  // document.getElementById("user").innerText = userDetails?.name;
   document.getElementById("loginbtn").innerText = "Logout";
   div.innerHTML=`<a href="./appointment_form.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
 }else{
