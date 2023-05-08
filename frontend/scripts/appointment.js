@@ -26,4 +26,3 @@ function handleSubmit(event) {
 
 	// Add code to send appointment data to server or store in database
 }
-``
