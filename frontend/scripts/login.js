@@ -44,6 +44,7 @@ const username = usernameInput.value;
                       })
                 }else{
                     // alert(res.success)
+                    localStorage.setItem("userDetails",JSON.stringify(res.User))
                     Swal.fire(
                         'Good job!',
                         'Successfully LoggedIn',
