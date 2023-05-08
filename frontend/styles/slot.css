@@ -1,0 +1,267 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  width: 80%;
+  margin: auto;
+}
+
+#workingprof_img {
+  margin-left: 20px;
+}
+#logo {
+  color: tomato;
+  font-weight: 400;
+}
+#manager {
+  font-weight: 400;
+  color: grey;
+}
+#user_name {
+  font-size: 30px;
+  font-weight: 400;
+  /* padding: -10px; */
+  padding-top: 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+#userid {
+  padding-top: 10px;
+}
+#userid,
+#email {
+  color: grey;
+}
+#address {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#workingprof {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
+#img-prof {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* table ------> table ------> table ------> table ------> table ------> table ------>*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#calendar-day th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+
+#appointment-btn td {
+  vertical-align: top;
+  position: relative;
+}
+
+#appointment-btn button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+#appointment-btn button:hover {
+  background-color: #ebebeb;
+}
+
+#appointment-btn button:last-child {
+  margin-bottom: 0;
+}
+
+#appointment-btn button + br {
+  display: none; /* hide the first br element after each button */
+}
+
+#appointment-btn button:focus + br {
+  display: block; /* show the first br element after each button when it receives focus */
+}
+
+#appointment-btn button:disabled
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+
+
+/* table ------> table ------> table ------> table ------> table ------> table ------>*/
+
+
+.button-65 {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: rgb(244, 133, 114);
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 14px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-65:hover {
+  background-color: rgb(199, 77, 55);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 5px 30px, rgba(0, 0, 0, 0.05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+
+.button-65:hover:after {
+  opacity: 0.5;
+}
+
+.button-65:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px 0, rgba(0, 0, 0, 0.1) 0 0 10px 0,
+    rgba(0, 0, 0, 0.1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+
+.button-65:active:after {
+  opacity: 1;
+}
+
+#button_div {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* slot-btn */
+
+#appointment-btn .slot-btn.focused {
+  background-color: rgb(238, 130, 54);
+  color: #f2f2f2;
+}
+
+#appointment-btn .slot-btn {
+  background-color: #f2f2f2;
+  color: rgb(64, 59, 59);
+}
+
+@media (min-width: 768px) {
+  .button-65 {
+    padding: 14px 22px;
+    width: 176px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  */ body {
+    width: 90%;
+  }
+  #workingprof {
+    width: 100%;
+    margin: auto;
+    margin-left: 20px;
+  }
+ 
+}
+
+
+/* popup div */
+#confirmation-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  width: 400px;
+}
+
+#confirmation-popup p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+.options button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#yes-btn {
+  background-color: green;
+  color: #fff;
+}
+
+#no-btn {
+  background-color: red;
+  color: #fff;
+}
+
+
+
+
