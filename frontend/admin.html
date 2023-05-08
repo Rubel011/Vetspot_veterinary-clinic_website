@@ -32,7 +32,7 @@
             </div>
             <hr>
             <button id="openFormButton">User add</button>
-            <div id="loginFormContainer" style="display: none;">
+            <div id="loginFormContainer" style="display: none">
                 <form id="loginForm">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="name" placeholder="Enter your username">
@@ -46,9 +46,45 @@
                     <button type="submit">Submit</button>
                 </form>
             </div>
+            <button id="openDoctorFormButton">Doctor add</button>
+            <div id="logindoctorFormContainer" style="display: none">
+                <form id="loginDForm">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="gender">Gender:</label><br>
+                    <select id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br><br>
+
+                    <label for="img">Image URL:</label><br>
+                    <input type="text" id="img" name="img"><br><br>
+
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="experience">Experience (in years):</label><br>
+                    <input type="number" id="experience" name="experience"><br><br>
+
+                    <label for="specialization">Specialization:</label><br>
+                    <select id="specialization" name="specialization" required>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Cow & Buffalo">Cow & Buffalo</option>
+                        <option value="Emergency">Emergency</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
         </div>
         <hr>
-        <div id="seconddiv" >
+        <div id="seconddiv">
             <div style="display: block" id="userdiv">
                 <h1> User Details</h1>
                 <hr>
@@ -75,15 +111,17 @@
                 <h1> doctor Details</h1>
                 <hr>
 
-                <h1>Total user: <span id="totaluser">0</span></h1>
+                <h1>Total user: <span id="dtotaluser">0</span></h1>
                 <!-- <button id="openSwalButton">Open Swal</button> -->
                 <div>
-                    <table id="todosTable">
+                    <table id="doctortodosTable">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Exp.</th>
+                                <th>spc.</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

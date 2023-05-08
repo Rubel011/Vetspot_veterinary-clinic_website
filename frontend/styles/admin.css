@@ -33,18 +33,21 @@ button {
     /* background-color: #f1f1f1; */
     padding: 20px;
     width: 25%;
-    
+
 }
-#firstdiv div{
+
+#firstdiv div {
     width: 80%;
     margin: auto;
     margin-top: 20px;
 }
-#firstdiv div:hover{
+
+#firstdiv div:hover {
     /* background-color: blueviolet; */
     text-decoration: underline;
-    
+
 }
+
 /* Styles for Second Div */
 
 #seconddiv {
@@ -52,10 +55,12 @@ button {
     width: 75%;
     /* border: 1px solid yellow; */
 }
-#seconddiv h1{
+
+#seconddiv h1 {
     text-align: center;
     font-size: xx-large;
 }
+
 #openFormButton {
     margin-bottom: 10px;
 }
@@ -101,6 +106,23 @@ button {
     width: 100%;
 }
 
+#doctortodosTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#doctortodosTable th,
+#doctortodosTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#doctortodosTable thead {
+    background-color: rgb(114, 0, 0);
+    color: white;
+    width: 100%;
+}
+
 table {
     width: 100%;
 }
@@ -109,31 +131,35 @@ table {
 
 @media screen and (max-width: 768px) {
     h1 {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     #loginForm input[type="text"],
     #loginForm input[type="email"],
     #loginForm input[type="password"] {
-      width: 80%;
-    }
-  
-    #todosTable th,
-    #todosTable td {
-      font-size: 14px;
-     
+        width: 80%;
     }
 
-  }
-  
-  body {
+    #todosTable th,
+    #todosTable td {
+        font-size: 14px;
+
+    }
+
+    #doctortodosTable th,
+    #doctortodosTable td {
+        font-size: 14px;
+    }
+}
+
+body {
     padding: 25px;
     background-color: white;
     color: black;
     font-size: 25px;
-  }
-  
-  .dark-mode {
+}
+
+.dark-mode {
     background-color: black;
     color: white;
-  }
+}
