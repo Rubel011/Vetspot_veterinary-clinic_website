@@ -44,6 +44,7 @@ let login_icon = document.getElementById("loginbtn");
 let navRedirect = document.getElementById("navredirect");
 let viewApp = document.getElementById("viewApp");
 let adminbtn = document.getElementById("adminbtn");
+let videoCall = document.getElementById("videoCall");
 
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
@@ -63,6 +64,20 @@ viewApp.addEventListener("click", () => {
   if (userDetails) {
 
     window.location.href = "doctor.html";
+
+  } else {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Please Login First",
+      showConfirmButton: true,
+    });
+  }
+});
+videoCall.addEventListener("click", () => {
+  if (userDetails) {
+
+    window.location.href = "./videosharing/frontend/index.html";
 
   } else {
     Swal.fire({
