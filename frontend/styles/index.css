@@ -48,8 +48,9 @@
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -1.5px;
-    background: rgb(89, 79, 234);
-    background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%);
+    /* background: rgb(89, 79, 234); */
+    /* background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%); */
+    background: linear-gradient(to right,#1976D2,#4FC3F7);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -147,8 +148,9 @@
     width: 80%;
     min-height: 200px;
     margin: 80px auto;
-    background: rgb(228, 70, 144);
-    background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%);
+    /* background: rgb(228, 70, 144); */
+    /* background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%); */
+    background: linear-gradient(to right,#4FC3F7,#1976D2);
     border-radius: 10px;
     padding: 20px 40px;
 }
@@ -180,8 +182,9 @@
 .pet-parents h1 {
     font-size: 48px;
     letter-spacing: -1.2px;
-    background: rgb(89, 79, 234);
-    background: linear-gradient(90deg, #c0135f 0%, #544dcf);
+    /* background: rgb(89, 79, 234); */
+    /* background: linear-gradient(90deg, #c0135f 0%, #544dcf); */
+    background:linear-gradient(to right,#1976D2,#4FC3F7) ;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -252,7 +255,7 @@
 .ratings i {
     font-size: 18px;
     margin: 20px 3px;
-    color: #e54391;
+    color: #FDCC0D;
 }
 
 .slide-innerText {
