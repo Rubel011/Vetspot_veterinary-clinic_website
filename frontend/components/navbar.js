@@ -30,6 +30,9 @@ const navbar = () => {
                     <li class="nav-item">
                         <a  id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
                     </li>
+                    <li class="nav-item">
+                        <a  id="adminbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Admin</a>
+                    </li>
                 
                    
                 </ul>

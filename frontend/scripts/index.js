@@ -13,20 +13,20 @@ logo.addEventListener("click", () => {
 
 
 
-let btn=document.getElementById("redirectBtn");
+let btn = document.getElementById("redirectBtn");
 
 // setting username
 let userDetails = JSON.parse(localStorage.getItem("userDetails")) || null;
-let div=document.getElementById("redirectBtn");
+let div = document.getElementById("redirectBtn");
 if (userDetails) {
   // console.log(userDetails.name)
   document.getElementById("userName").innerText = `👏Hi, ${userDetails?.name}`;
   document.getElementById("loginbtn").innerText = "Logout";
   // div.innerHTML=`<a href="./appointment.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
-}else{
-  div.innerHTML=`<a href="#" class="flex" id="chhodyar"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
-  let temp=document.getElementById("chhodyar");
-  temp.addEventListener("click",()=>{
+} else {
+  div.innerHTML = `<a href="#" class="flex" id="chhodyar"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
+  let temp = document.getElementById("chhodyar");
+  temp.addEventListener("click", () => {
     Swal.fire({
       position: "center",
       icon: "error",
@@ -43,12 +43,13 @@ if (userDetails) {
 let login_icon = document.getElementById("loginbtn");
 let navRedirect = document.getElementById("navredirect");
 let viewApp = document.getElementById("viewApp");
+let adminbtn = document.getElementById("adminbtn");
 
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
 
     window.location.href = "appointment.html";
-    
+
   } else {
     Swal.fire({
       position: "center",
@@ -62,7 +63,7 @@ viewApp.addEventListener("click", () => {
   if (userDetails) {
 
     window.location.href = "doctor.html";
-    
+
   } else {
     Swal.fire({
       position: "center",
@@ -72,16 +73,36 @@ viewApp.addEventListener("click", () => {
     });
   }
 });
+adminbtn.addEventListener("click", () => {
+  console.log(userDetails);
+  if (userDetails.role=="admin") {
+
+    window.location.href = "admin.html";
+
+  } else {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Your are not Authorize",
+      showConfirmButton: true,
+    });
+  }
+});
 
 login_icon.addEventListener("click", () => {
   if (userDetails) {
-    fetch(`https://troubled-pig-life-jacket.cyclic.app/user/logout`, {headers:{
-      Authorization: localStorage.getItem("token")
-  }})
-    localStorage.removeItem("userDetails");
-    localStorage.removeItem("token");
-    window.location.href = "index.html";
-    
+    fetch(`https://troubled-pig-life-jacket.cyclic.app/user/logout`, {
+      headers: {
+        Authorization: localStorage.getItem("token")
+      }
+    }).then((res) => res.json()).then((res) =>{
+      localStorage.removeItem("userDetails");
+      localStorage.removeItem("token");
+      window.location.href = "index.html";
+       
+    }).catch((err) => console.log(err))
+
+
   } else {
     window.location.href = "login.html";
 
