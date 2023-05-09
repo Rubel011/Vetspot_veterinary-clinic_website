@@ -146,6 +146,10 @@ PATCH /appointment/update/:id
    <img width="960" alt="Class_Information" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/admin-light.png">
    <h2>Admin Light-Mode</h2>
    <img width="938" alt="Admin_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/admin-dark.png">
+     <h2>Virtual Meet</h2>
+   <img width="938" alt="Admin_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/virtual.png">
+   
+
    <br>
   
    
