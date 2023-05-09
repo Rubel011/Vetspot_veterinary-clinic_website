@@ -180,5 +180,5 @@ PATCH /appointment/update/:id
  
  [PRITI TIWARI](https://github.com/prititi) 
  
- [HARIOM](https://github.com/hariomsfw21) 
+ [HARIOM](https://github.com/hariomfw21) 
  
