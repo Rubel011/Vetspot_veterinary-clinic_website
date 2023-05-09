@@ -2,9 +2,9 @@
 const navbar = () => {
     
     return `
-    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" style="background: linear-gradient(to right,#4FC3F7,#1976D2); padding-right: 0 40px; display: flex; justify-content: space-between;">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" style="background: linear-gradient(to right,#1976D2,#4FC3F7); padding-right: 0 40px; display: flex; justify-content: space-between;">
     <div class="flex">
-        <img src="./images/Vetspotlogo.jpg" height="70" alt=""
+        <img  src="./images/logo_2.jpeg" height="70" alt=""
             loading="lazy" id="logo" style="cursor:pointer;"/>
         <div class="navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row" id="navUL">
