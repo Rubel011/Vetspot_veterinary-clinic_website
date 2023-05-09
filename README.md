@@ -134,19 +134,19 @@ PATCH /appointment/update/:id
 
  <div align = "center">
    <h2>Landing Page</h2>
-   <img width="956" alt="Landing_Page" src="https://github.com/atir09/spicy-bushes-5520/assets/112818778/098025e5-c6b6-418d-bfde-fa6278b8b19a">
+   <img width="956" alt="Landing_Page" src="">
    <br>
    <h2>Client Dashboard</h2>
-   <img width="960" alt="User_Dashboard" src="https://github.com/atir09/spicy-bushes-5520/assets/112818778/37736d87-5301-4fb4-be8f-0edc31b2895e">
+   <img width="960" alt="User_Dashboard" src="">
    <br>
    <h2>Trainer Dashboard</h2>
-   <img width="958" alt="Trainer_Dashboard" src="https://github.com/atir09/spicy-bushes-5520/assets/112818778/e9a50223-99e3-493b-a72d-089a9c6775c4">
+   <img width="958" alt="Trainer_Dashboard" src="">
    <br>
    <h2>Class Information</h2>
-   <img width="960" alt="Class_Information" src="https://github.com/atir09/spicy-bushes-5520/assets/112818778/f656b37b-7fdb-441a-a79e-1d256819c740">
+   <img width="960" alt="Class_Information" src="">
    <br>
    <h2>Admin Dashboard</h2>
-   <img width="938" alt="Admin_Dashboard" src="https://github.com/atir09/spicy-bushes-5520/assets/112818778/3673f256-bb5b-4cfc-a82e-35f1137c2282">
+   <img width="938" alt="Admin_Dashboard" src="">
    <br>
 <div/>
   <br>
