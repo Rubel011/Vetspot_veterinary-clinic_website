@@ -12,7 +12,7 @@ const navbar = () => {
                     <a class="nav-link" aria-current="page"  id="navredirect"  style="color: #fff; cursor: pointer; ">Book Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#" style="color: #fff;">View Appointment</a>
+                    <a class="nav-link" id="viewApp" aria-current="page"  style="color: #fff;">View Appointment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./videosharing/frontend/index.html" style="color: #fff;">Connect</a>
@@ -29,6 +29,9 @@ const navbar = () => {
                     </li>
                     <li class="nav-item">
                         <a  id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  id="adminbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Admin</a>
                     </li>
                 
                    

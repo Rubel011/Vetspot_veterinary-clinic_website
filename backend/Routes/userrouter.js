@@ -114,7 +114,7 @@ userRouter.post("/login", async (req, res) => {
 
 userRouter.get("/logout", async (req, res) => {
     try {
-        let token=req.cookies.token
+        let token=req.headers.authorization
         // console.log(token);
         // await client.HDEL("tokensObj", token)
         let block=new BlockModel({token})
