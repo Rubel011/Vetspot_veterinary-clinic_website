@@ -139,14 +139,16 @@ PATCH /appointment/update/:id
    <h2>Doctor Dashboard</h2>
    <img width="960" alt="User_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/Doctor.png">
    <br>
-   <h2>Trainer Dashboard</h2>
-   <img width="958" alt="Trainer_Dashboard" src="">
+   <h2>Book Appointment Dashboard</h2>
+   <img width="958" alt="Trainer_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/bookappointment.png">
    <br>
-   <h2>Class Information</h2>
-   <img width="960" alt="Class_Information" src="">
+   <h2>Admin Dark-Mode</h2>
+   <img width="960" alt="Class_Information" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/admin-light.png">
+   <h2>Admin Light-Mode</h2>
+   <img width="938" alt="Admin_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/admin-dark.png">
    <br>
-   <h2>Admin Dashboard</h2>
-   <img width="938" alt="Admin_Dashboard" src="">
+  
+   
    <br>
 <div/>
   <br>
