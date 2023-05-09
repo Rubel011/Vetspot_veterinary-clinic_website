@@ -26,23 +26,24 @@ AppointmentRouter.get("/get", async (req, res) => {
 
 AppointmentRouter.post("/create", async (req, res) => {
     try {
-        let date = req.body.date
-        let time = req.body.time
+        // let date = req.body.date
+        // let time = req.body.time
         let email = req.body.email
-        let Data = await AppointmentModel.findOne({ date, time });
+        // let Data = await AppointmentModel.findOne({ date, time });
+        let Data=null;
         if (Data) {
             res.send({ "Error": "Slot Not Available" })
         } else {
             try {
                 let appointment = new AppointmentModel(req.body);
                 await appointment.save()
-                res.send(JSON.stringify("Appointment Created"));
                 
-                let vetCareEmail= process.env.vetspotEmail
+                
+                let vetspotEmail= process.env.vetspotEmail
                 let vetspotPassword= process.env.vetspotPassword
                 const msg = {
                     to: email,
-                    from: "Vetcare",
+                    from: "VetSpot",
                     subject: "Appointment",
                     text: "Thanks for booking an appointment you will be notified whenever your appointment will be approved."
                 }
@@ -66,6 +67,7 @@ AppointmentRouter.post("/create", async (req, res) => {
             } catch (error) {
                 res.send({ "Error": error.message })
             }
+            res.status(403).json({success:"Appointment Created"});
         }
 
     } catch (error) {

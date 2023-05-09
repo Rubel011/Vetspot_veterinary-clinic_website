@@ -1,7 +1,5 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
+const myform = document.getElementById("form");
+myform.addEventListener("submit", (event) =>{
 	event.preventDefault();
 
 	const petName = document.getElementById('pet-name').value;
@@ -21,8 +19,47 @@ function handleSubmit(event) {
 		appointmentTime,
 		reasonForVisit
 	};
-
-	console.log(appointment);
+	postAppointment(appointment)
+	// console.log(appointment);
 
 	// Add code to send appointment data to server or store in database
+})
+
+function postAppointment(formDataObject){
+	fetch("https://troubled-pig-life-jacket.cyclic.app/Appointment/create", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" ,Authorization: localStorage.getItem("token")},
+            body: JSON.stringify(formDataObject)
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                if (res) {
+                    // alert(res.msg)
+
+                    Swal.fire(
+                        'Good job!',
+                        'Successfully user added',
+                        'success'
+                    )
+                    setTimeout(()=>{
+						window.location.href=`doctor.html?type=${formDataObject.petName}`
+					},1000)
+
+                } else {
+                    // alert(res.message)
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'User Already Exists',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
+                }
+
+            })
+            .catch(error => {
+
+                console.log(error);
+            });
 }

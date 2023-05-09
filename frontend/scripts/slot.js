@@ -55,7 +55,7 @@ console.log(arr);
 
 //
 function getData() {
-  fetch(`http://localhost:1500/gettime/${profId}`)
+  fetch(`https://troubled-pig-life-jacket.cyclic.app/gettime/${profId}`)
     .then((res) => res.json())
     .then((data) => {
       displayData(data);
@@ -143,7 +143,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
   };
   console.log(obj);
   try {
-    let result = await fetch(`http://localhost:1500/uptime`, {
+    let result = await fetch(`https://troubled-pig-life-jacket.cyclic.app/uptime`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -165,7 +165,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
 // getting the particular persons data
 
 function getWorkerInfo() {
-  fetch(`http://localhost:1500/doctor/getparticulardoc/${profId}`)
+  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getparticulardoc/${profId}`)
     .then((res) => res.json())
     .then((data) => {
       setData(data);

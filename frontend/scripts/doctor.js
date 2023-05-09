@@ -14,7 +14,7 @@ let card_section = document.querySelector("#card-section");
 // console.log(clicked_service);
 
 function getWorkers() {
-  fetch(`http://localhost:1500/doctor/getAllDoc`)
+  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getAllDoc`)
     .then((res) => res.json())
     .then((data) => {
       globalData = data.data;
