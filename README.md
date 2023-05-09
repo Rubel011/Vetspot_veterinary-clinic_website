@@ -136,8 +136,8 @@ PATCH /appointment/update/:id
    <h2>Landing Page</h2>
    <img width="956" alt="Landing_Page" src="">
    <br>
-   <h2>Client Dashboard</h2>
-   <img width="960" alt="User_Dashboard" src="">
+   <h2>Doctor Dashboard</h2>
+   <img width="960" alt="User_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/Doctor.png">
    <br>
    <h2>Trainer Dashboard</h2>
    <img width="958" alt="Trainer_Dashboard" src="">
