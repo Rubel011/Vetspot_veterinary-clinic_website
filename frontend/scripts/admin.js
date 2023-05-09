@@ -112,7 +112,7 @@ loginForm.addEventListener('submit', function (event) {
 
     // Perform login logic here...
     // ...
-    if (email && password && name != "") {
+    if (email && password != "") {
         fetch("https://troubled-pig-life-jacket.cyclic.app/user/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -317,10 +317,10 @@ loginDForm.addEventListener('submit', function (event) {
 
     // Perform login logic here...
     // ...
-    if (name && email && gender && img && age && experience && specialization != "") {
+    if (email && gender && img && age && experience && specialization != "") {
         fetch("https://troubled-pig-life-jacket.cyclic.app/doctor/register", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json", Authorization: localStorage.getItem("token") },
             body: JSON.stringify(formDataObject)
         })
             .then(res => res.json())
