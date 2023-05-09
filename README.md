@@ -157,19 +157,19 @@ PATCH /appointment/update/:id
 
 [FRONTEND](https://go-fit.netlify.app/)
 
-[BACKEND](https://rich-plum-barracuda-fez.cyclic.app/)
+[BACKEND](https://troubled-pig-life-jacket.cyclic.app/)
 
  
 | `Authors` |
 | :-------: | 
 
- [ATIR KHAN](https://github.com/atir09) 
+ [RAMANAND TIWARI](https://github.com/ramanand1101) 
  
- [PRASHANT VERMA](https://github.com/prashant9191) 
+ [RUBEL FORIDI](https://github.com/rubel011) 
  
- [SHRADHA VASTRAKAR](https://github.com/ShradhaVastrakar) 
+ [ASHISH KUMAR PALAI](https://github.com/ashishkumarpalai) 
  
- [SHAIK ISMAIL](https://github.com/ShaikIsmail0567) 
+ [PRITI TIWARI](https://github.com/prititi) 
  
- [SWATI TANU](https://github.com/Swati-Tanu) 
+ [HARIOM](https://github.com/) 
  
