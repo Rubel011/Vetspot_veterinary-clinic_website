@@ -36,8 +36,8 @@ body {
 }
 #animalUp{
     /* border: 1px solid red; */
-    width: 90%;
-    margin-top: 0px;
+    width:67%;
+    margin-top: -7px;
 }
 .form.active {
     display: block;
@@ -91,7 +91,7 @@ body {
     margin-right: 10%;
 }
 #left img{
-    width: 100%;
+    width: 150%;
     margin-top: 17%;
     margin-left: 5%;
 }

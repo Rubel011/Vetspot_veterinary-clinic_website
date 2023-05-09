@@ -9,7 +9,7 @@ const navbar = () => {
         <div class="navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row" id="navUL">
                 <li class="nav-item active">
-                    <a class="nav-link" aria-current="page"  id="navredirect"  style="color: #fff;">Book Appointment</a>
+                    <a class="nav-link" aria-current="page"  id="navredirect"  style="color: #fff; cursor: pointer; ">Book Appointment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#" style="color: #fff;">View Appointment</a>
@@ -144,13 +144,13 @@ const navbar = () => {
   
                       <ul class="list-unstyled">
                           <li>
-                              <p><i class="fas fa-map-marker-alt pe-2 mr-2"></i>Warsaw, 57 Street, Poland</p>
+                              <p><i class="fas fa-map-marker-alt pe-2 mr-2"></i>Los Angeles, 102 Street, UK</p>
                           </li>
                           <li>
                               <p><i class="fas fa-phone pe-2 mr-2"></i>+ 01 234 567 89</p>
                           </li>
                           <li>
-                              <p><i class="fas fa-envelope pe-2 mb-0 mr-2"></i>vetcare@gmail.com</p>
+                              <p><i class="fas fa-envelope pe-2 mb-0 mr-2"></i>vetSpot@gmail.com</p>
                           </li>
                       </ul>
                   </div>
@@ -163,7 +163,7 @@ const navbar = () => {
           <!-- Copyright -->
           <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
               © 2023 Copyright:
-              <a class="text-white" href="#">Vetcare.com</a>
+              <a class="text-white" href="#">VetSpot.com</a>
           </div>
           <!-- Copyright -->
       </footer>
