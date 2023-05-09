@@ -22,7 +22,7 @@ if (userDetails) {
   // console.log(userDetails.name)
   document.getElementById("userName").innerText = `👏Hi, ${userDetails?.name}`;
   document.getElementById("loginbtn").innerText = "Logout";
-  div.innerHTML=`<a href="./appointment.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
+  // div.innerHTML=`<a href="./appointment.html" class="flex"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
 }else{
   div.innerHTML=`<a href="#" class="flex" id="chhodyar"><i class="fa-solid fa-video"></i> Book an online vet now</a>`
   let temp=document.getElementById("chhodyar");
@@ -60,6 +60,9 @@ navRedirect.addEventListener("click", () => {
 
 login_icon.addEventListener("click", () => {
   if (userDetails) {
+    fetch(`https://troubled-pig-life-jacket.cyclic.app/user/logout`, {headers:{
+      Authorization: localStorage.getItem("token")
+  }})
     localStorage.removeItem("userDetails");
     localStorage.removeItem("token");
     window.location.href = "index.html";

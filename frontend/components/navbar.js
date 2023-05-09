@@ -12,7 +12,7 @@ const navbar = () => {
                     <a class="nav-link" aria-current="page"  id="navredirect"  style="color: #fff;">Book Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#" style="color: #fff;">View Appointment</a>
+                    <a class="nav-link" aria-current="page" href="doctor.html" style="color: #fff;">View Appointment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./videosharing/frontend/index.html" style="color: #fff;">Connect</a>
