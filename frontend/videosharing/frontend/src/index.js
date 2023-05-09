@@ -1,14 +1,29 @@
-import { navbar, footer } from "../components/navbar.js";
+import { navbar, footer } from "../../../components/navbar.js";
+// const socket = io('http://localhost:8080/');
 let navbarContainer = document.getElementById("navbar");
 let footerContainer = document.getElementById("footer");
 
 navbarContainer.innerHTML = navbar();
 footerContainer.innerHTML = footer();
 
+
+const roomID = document.getElementById('roomID');
+const joinRoom = document.getElementById('joinRoom');
+joinRoom.onclick = (e) => {
+    e.preventDefault();  
+
+    const RoomID = roomID.value;
+
+    localStorage.setItem("RoomID" , RoomID)
+
+    window.location.href = "./chat.html"
+}
+
+
 // Home redirect
 let logo = document.getElementById("logo");
 logo.addEventListener("click", () => {
-  window.location.href = "index.html";
+  window.location.href = "../../index.html";
 });
 
 
@@ -48,7 +63,7 @@ let adminbtn = document.getElementById("adminbtn");
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
 
-    window.location.href = "appointment.html";
+    window.location.href = "../../appointment.html";
 
   } else {
     Swal.fire({
@@ -62,7 +77,7 @@ navRedirect.addEventListener("click", () => {
 viewApp.addEventListener("click", () => {
   if (userDetails) {
 
-    window.location.href = "doctor.html";
+    window.location.href = "../../doctor.html";
 
   } else {
     Swal.fire({
@@ -86,7 +101,7 @@ adminbtn.addEventListener("click", () => {
   }
   if (userDetails.role=="admin") {
 
-    window.location.href = "admin.html";
+    window.location.href = "../../admin.html";
 
   }
   else {
@@ -108,13 +123,13 @@ login_icon.addEventListener("click", () => {
     }).then((res) => res.json()).then((res) =>{
       localStorage.removeItem("userDetails");
       localStorage.removeItem("token");
-      window.location.href = "index.html";
+      window.location.href = "../../index.html";
        
     }).catch((err) => console.log(err))
 
 
   } else {
-    window.location.href = "login.html";
+    window.location.href = "../../login.html";
 
   }
 });
