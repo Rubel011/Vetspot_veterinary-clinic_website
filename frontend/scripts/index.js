@@ -42,11 +42,26 @@ if (userDetails) {
 // redirect to account/login
 let login_icon = document.getElementById("loginbtn");
 let navRedirect = document.getElementById("navredirect");
+let viewApp = document.getElementById("viewApp");
 
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
 
     window.location.href = "appointment.html";
+    
+  } else {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Please Login First",
+      showConfirmButton: true,
+    });
+  }
+});
+viewApp.addEventListener("click", () => {
+  if (userDetails) {
+
+    window.location.href = "doctor.html";
     
   } else {
     Swal.fire({
