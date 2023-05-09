@@ -162,7 +162,7 @@ PATCH /appointment/update/:id
 | :----: | 
    
 
-[FRONTEND](https:vetspot.netlify.app)
+[FRONTEND](https://vetspot.netlify.app/)
 
 [BACKEND](https://troubled-pig-life-jacket.cyclic.app/)
 
