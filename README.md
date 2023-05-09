@@ -157,7 +157,7 @@ PATCH /appointment/update/:id
 | :----: | 
    
 
-[FRONTEND](https://go-fit.netlify.app/)
+[FRONTEND](https:)
 
 [BACKEND](https://troubled-pig-life-jacket.cyclic.app/)
 
