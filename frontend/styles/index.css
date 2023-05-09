@@ -194,6 +194,10 @@
     width: 46%;
     margin: 20px auto;
 }
+#slider_parent{
+    margin-top: 10px;
+    width: 46%;
+}
 
 .pet-parents div p {
     font-size: 20px;
@@ -243,10 +247,12 @@
     display: flex;
     width: calc(250px * 8);
     gap: 30px;
+    
 }
 
 .slide {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: 10px 10px 30px rgb(243, 156, 94); */
+    box-shadow: rgba(77, 208, 225) 0px 13px 27px -5px, rgba(79, 195, 247) 0px 8px 16px -8px;
     text-align: center;
     border-radius: 10px;
     padding: 0 20px;
@@ -280,6 +286,7 @@
 .rater {
     display: flex;
     align-items: center;
+    
 }
 
 .raterDetail {
