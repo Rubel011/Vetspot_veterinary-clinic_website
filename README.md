@@ -58,7 +58,7 @@ npx nodemon index.js
 ```
 ### Runs the project in the development mode
 
-[http://localhost:9876](http://localhost:1500)
+[http://localhost:1500](http://localhost:1500)
 
 
 ## Run
