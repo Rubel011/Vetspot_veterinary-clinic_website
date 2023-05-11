@@ -81,6 +81,17 @@ function totalEmployee(data) {
   totalEmployee.innerHTML = `<span>${data}</span> Employee`;
 }
 
+function handleFilterClick(event){
+  let  buttonText = event.target.innerHTML;
+  let filtereddata = globalData.filter((item)=>{
+    return item.specialization == event
+  })
+  displayCard(filtereddata);
+}
+
+
+
+
 // let sort = document.getElementById("price");
 // sort.addEventListener("change", () => {
 //   sortByPrice(globalData, sort.value);
@@ -120,46 +131,3 @@ function totalEmployee(data) {
 
 // highlighting text
 
-let dashboard = document.querySelector(".container .dashboard");
-
-let para = dashboard.childNodes;
-
-for (let i = 1; i < para.length; i = i + 2) {
-  para[i].addEventListener("click", () => {
-    changeColor(i);
-  });
-}
-
-function changeColor(index) {
-  for (let i = 1; i < para.length; i = i + 2) {
-    if (i == index) {
-      para[i].classList.add("focused");
-    } else {
-      para[i].classList.remove("focused");
-    }
-  }
-  console.log("done");
-}
-
-// console.log(dashboard.childNodes[1].innerHTML);
-
-function handleOnClick() {
-  let cards = document.getElementsByClassName("card");
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", () => {
-      localStorage.setItem("profId", cards[i].dataset.set);
-      // console.log(cards[i].dataset.set)
-      window.location.href = "slot.html";
-    });
-  }
-}
-
-function redirect() {
-  window.location.href = "index.html";
-}
-
-let user = localStorage.getItem("user_name");
-
-document.getElementById("user_name").innerHTML = user;
-
-// home --> bookappointment page ---> [cat]--> localstorage set (cat) ---> doctor
