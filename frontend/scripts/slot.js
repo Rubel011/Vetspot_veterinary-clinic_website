@@ -1,5 +1,5 @@
 let profId = localStorage.getItem("profId");
-console.log(profId);
+// console.log(profId);
 
 // pop up javascript
 
@@ -55,7 +55,9 @@ console.log(arr);
 
 //
 function getData() {
-  fetch(`https://troubled-pig-life-jacket.cyclic.app/gettime/${profId}`)
+  fetch(`https://troubled-pig-life-jacket.cyclic.app/gettime/${profId}`,{ headers: {
+    Authorization: localStorage.getItem("token")
+}})
     .then((res) => res.json())
     .then((data) => {
       displayData(data);
@@ -147,6 +149,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
+        Authorization: localStorage.getItem("token")
       },
       body: JSON.stringify(obj),
     });
@@ -165,7 +168,9 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
 // getting the particular persons data
 
 function getWorkerInfo() {
-  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getparticulardoc/${profId}`)
+  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getparticulardoc/${profId}`,{ headers: {
+    Authorization: localStorage.getItem("token")
+}})
     .then((res) => res.json())
     .then((data) => {
       setData(data);

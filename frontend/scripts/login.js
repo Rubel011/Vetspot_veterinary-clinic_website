@@ -104,7 +104,7 @@ const username = usernameInput.value;
                       )
                       setTimeout(()=>{
                           window.location.href="login.html"
-                      },1500)
+                      },1000)
                 }else{
                     // alert(res.message)
                     

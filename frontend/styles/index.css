@@ -48,8 +48,9 @@
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -1.5px;
-    background: rgb(89, 79, 234);
-    background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%);
+    /* background: rgb(89, 79, 234); */
+    /* background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%); */
+    background: linear-gradient(to right,#1976D2,#4FC3F7);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -93,6 +94,7 @@
     width: 80%;
     margin: 20px auto;
     text-align: center;
+    cursor: pointer;
 }
 
 .book-with-confidence-innerText {
@@ -146,8 +148,9 @@
     width: 80%;
     min-height: 200px;
     margin: 80px auto;
-    background: rgb(228, 70, 144);
-    background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%);
+    /* background: rgb(228, 70, 144); */
+    /* background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%); */
+    background: linear-gradient(to right,#4FC3F7,#1976D2);
     border-radius: 10px;
     padding: 20px 40px;
 }
@@ -179,8 +182,9 @@
 .pet-parents h1 {
     font-size: 48px;
     letter-spacing: -1.2px;
-    background: rgb(89, 79, 234);
-    background: linear-gradient(90deg, #c0135f 0%, #544dcf);
+    /* background: rgb(89, 79, 234); */
+    /* background: linear-gradient(90deg, #c0135f 0%, #544dcf); */
+    background:linear-gradient(to right,#1976D2,#4FC3F7) ;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -189,6 +193,10 @@
 .pet-parents div {
     width: 46%;
     margin: 20px auto;
+}
+#slider_parent{
+    margin-top: 10px;
+    width: 46%;
 }
 
 .pet-parents div p {
@@ -239,10 +247,12 @@
     display: flex;
     width: calc(250px * 8);
     gap: 30px;
+    
 }
 
 .slide {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: 10px 10px 30px rgb(243, 156, 94); */
+    box-shadow: rgba(77, 208, 225) 0px 13px 27px -5px, rgba(79, 195, 247) 0px 8px 16px -8px;
     text-align: center;
     border-radius: 10px;
     padding: 0 20px;
@@ -251,7 +261,7 @@
 .ratings i {
     font-size: 18px;
     margin: 20px 3px;
-    color: #e54391;
+    color: #FDCC0D;
 }
 
 .slide-innerText {
@@ -276,6 +286,7 @@
 .rater {
     display: flex;
     align-items: center;
+    
 }
 
 .raterDetail {
