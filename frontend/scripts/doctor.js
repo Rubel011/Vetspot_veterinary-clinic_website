@@ -22,7 +22,7 @@ function getWorkers() {
       globalData = data.data;
       console.log(data.data);
       displayCard(data.data);
-      totalEmployee(data.length);
+      // totalEmployee(data.length);
     })
     .catch((err) => console.log(err));
 }
@@ -75,61 +75,21 @@ function displayCard(data) {
     `;
   });
   card_section.innerHTML = displayData.join("");
-  handleOnClick();
 }
 
-function totalEmployee(data) {
-  let totalEmployee = document.getElementById("total-employee");
-  totalEmployee.innerHTML = `<span>${data}</span> Employee`;
-}
+// function totalEmployee(data) {
+//   let totalEmployee = document.getElementById("total-employee");
+//   totalEmployee.innerHTML = `<span>${data}</span> Employee`;
+// }
 
 function handleFilterClick(event){
   let  buttonText = event.target.innerHTML;
   let filtereddata = globalData.filter((item)=>{
-    return item.specialization == event
+    return item.specialization.toLowerCase() == buttonText.toLowerCase()
   })
+  console.log(typeof buttonText)
+  console.log(filtereddata);
   displayCard(filtereddata);
 }
 
-
-
-
-// let sort = document.getElementById("price");
-// sort.addEventListener("change", () => {
-//   sortByPrice(globalData, sort.value);
-// });
-
-// function sortByPrice(data, sortType) {
-//   if (sortType == "LTH") {
-//     let sortedData = data.sort((a, b) => {
-//       return a.rate - b.rate;
-//     });
-//     displayCard(sortedData);
-//   } else {
-//     let sortedData = data.sort((a, b) => {
-//       return b.rate - a.rate;
-//     });
-//     displayCard(sortedData);
-//   }
-// }
-
-// search function
-
-// let search = document.getElementById("search");
-// search.addEventListener("input", () => {
-//   searchFunction(search.value);
-// });
-
-// function searchFunction(value) {
-//   let result = [];
-//   for (let i = 0; i < globalData.length; i++) {
-//     if (globalData[i].name.includes(value)) {
-//       result.push(globalData[i]);
-//     }
-//   }
-//   displayCard(result);
-//   totalEmployee(result.length);
-// }
-
-// highlighting text
 
