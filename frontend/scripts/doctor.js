@@ -77,10 +77,7 @@ function displayCard(data) {
   card_section.innerHTML = displayData.join("");
 }
 
-// function totalEmployee(data) {
-//   let totalEmployee = document.getElementById("total-employee");
-//   totalEmployee.innerHTML = `<span>${data}</span> Employee`;
-// }
+
 
 function handleFilterClick(event){
   let  buttonText = event.target.innerHTML;
