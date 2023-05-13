@@ -134,9 +134,9 @@ PATCH /appointment/update/:id
 
  <div align = "center">
    <h2>Landing Page</h2>
-   <img width="956" alt="Landing_Page" src="https://github.com/Rubel011/unarmed-science-115/assets/115465871/4c22ff1b-74be-4591-96e3-d6def5e550c5">
+   <img width="956" alt="Landing_Page" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/home2.jpg">
    <br>
-    <img width="956" alt="Landing_Page" src="https://github.com/Rubel011/unarmed-science-115/assets/115465871/47a149fd-61c6-4316-8acb-5d99b418a8b2">
+    <img width="956" alt="Landing_Page" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/home3.jpg">
    <h2>Doctor Dashboard</h2>
    <img width="960" alt="User_Dashboard" src="https://github.com/Rubel011/unarmed-science-115/blob/main/frontend/assests/Doctor.png">
    <br>
