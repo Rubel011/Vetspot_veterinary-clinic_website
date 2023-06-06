@@ -26,7 +26,7 @@ const username = usernameInput.value;
     const data = {email: username, password: password};
     console.log(data)
     if( password && username!=""){
-        fetch("https://troubled-pig-life-jacket.cyclic.app/user/login", {
+        fetch("https://veterinary-system.onrender.com/user/login", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
@@ -87,7 +87,7 @@ const username = usernameInput.value;
     const data = {name: username, email: email, password: password};
     console.log(data)
     if(email && password && username!=""){
-        fetch("https://troubled-pig-life-jacket.cyclic.app/user/register", {
+        fetch("https://veterinary-system.onrender.com/user/register", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)

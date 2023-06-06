@@ -116,7 +116,7 @@ adminbtn.addEventListener("click", () => {
 
 login_icon.addEventListener("click", () => {
   if (userDetails) {
-    fetch(`https://troubled-pig-life-jacket.cyclic.app/user/logout`, {
+    fetch(`https://veterinary-system.onrender.com/user/logout`, {
       headers: {
         Authorization: localStorage.getItem("token")
       }

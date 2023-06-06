@@ -14,7 +14,7 @@ let card_section = document.querySelector("#card-section");
 // console.log(clicked_service);
 
 function getWorkers() {
-  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getAllDoc`,{ headers: {
+  fetch(`https://veterinary-system.onrender.com/doctor/getAllDoc`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())

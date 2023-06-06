@@ -55,7 +55,7 @@ console.log(arr);
 
 //
 function getData() {
-  fetch(`https://troubled-pig-life-jacket.cyclic.app/gettime/${profId}`,{ headers: {
+  fetch(`https://veterinary-system.onrender.com/gettime/${profId}`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())
@@ -145,7 +145,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
   };
   console.log(obj);
   try {
-    let result = await fetch(`https://troubled-pig-life-jacket.cyclic.app/uptime`, {
+    let result = await fetch(`https://veterinary-system.onrender.com/uptime`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -168,7 +168,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
 // getting the particular persons data
 
 function getWorkerInfo() {
-  fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/getparticulardoc/${profId}`,{ headers: {
+  fetch(`https://veterinary-system.onrender.com/doctor/getparticulardoc/${profId}`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())
