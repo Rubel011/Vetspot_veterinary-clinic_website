@@ -26,7 +26,7 @@ myform.addEventListener("submit", (event) =>{
 })
 
 function postAppointment(formDataObject){
-	fetch("https://troubled-pig-life-jacket.cyclic.app/Appointment/create", {
+	fetch("https://veterinary-system.onrender.com/Appointment/create", {
             method: "POST",
             headers: { "Content-Type": "application/json" ,Authorization: localStorage.getItem("token")},
             body: JSON.stringify(formDataObject)

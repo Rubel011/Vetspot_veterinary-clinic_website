@@ -10,7 +10,7 @@ let todos = [];
 let dtodos = [];
 // Retrieve todos from API and display them in the table
 function getTodos() {
-    fetch('https://troubled-pig-life-jacket.cyclic.app/user/all', {
+    fetch('https://veterinary-system.onrender.com/user/all', {
         method: 'GET',
         //  credentials: 'same-origin' 
         headers: {
@@ -57,7 +57,7 @@ todosTable.addEventListener('click', (event) => {
     if (event.target.classList.contains('deleteTodoBtn')) {
         const todoId = (event.target.dataset.id);
         // console.log(localStorage.getItem("token"));
-        fetch(`https://troubled-pig-life-jacket.cyclic.app/user/delete/${todoId}`, {
+        fetch(`https://veterinary-system.onrender.com/user/delete/${todoId}`, {
             method: 'DELETE',
             // credentials: 'include' ,
             headers: {
@@ -113,7 +113,7 @@ loginForm.addEventListener('submit', function (event) {
     // Perform login logic here...
     // ...
     if (email && password != "") {
-        fetch("https://troubled-pig-life-jacket.cyclic.app/user/register", {
+        fetch("https://veterinary-system.onrender.com/user/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formDataObject)
@@ -214,7 +214,7 @@ function appointmentdiv() {
 
 //////doctor get all the data
 function getDoctorTodos() {
-    fetch('https://troubled-pig-life-jacket.cyclic.app/doctor/getAllDoc', {
+    fetch('https://veterinary-system.onrender.com/doctor/getAllDoc', {
         method: 'GET',
         //  credentials: 'same-origin' 
         headers: {
@@ -261,7 +261,7 @@ doctortodosTable.addEventListener('click', (event) => {
     if (event.target.classList.contains('deleteTodoBtn')) {
         const todoId = (event.target.dataset.id);
         // console.log(localStorage.getItem("token"));
-        fetch(`https://troubled-pig-life-jacket.cyclic.app/doctor/delete/${todoId}`, {
+        fetch(`https://veterinary-system.onrender.com/doctor/delete/${todoId}`, {
             method: 'DELETE',
             // credentials: 'include' ,
             headers: {
@@ -318,7 +318,7 @@ loginDForm.addEventListener('submit', function (event) {
     // Perform login logic here...
     // ...
     if (email && gender && img && age && experience && specialization != "") {
-        fetch("https://troubled-pig-life-jacket.cyclic.app/doctor/register", {
+        fetch("https://veterinary-system.onrender.com/doctor/register", {
             method: "POST",
             headers: { "Content-Type": "application/json", Authorization: localStorage.getItem("token") },
             body: JSON.stringify(formDataObject)
