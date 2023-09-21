@@ -1,39 +1,48 @@
-const express=require('express');
-const cors=require('cors');
+const express = require("express");
+const cors = require("cors");
+const swaggerUI = require("swagger-ui-express");
 const { connection } = require("./config/db");
-const {userRouter} = require("./Routes/userrouter")
-const {doctorRouter} = require("./Routes/DoctorRouter")
-const {AppointmentRouter} = require("./Routes/AppointmentRouter")
-const {authenticator}  = require("./Middleware/authenticator")
-require('dotenv').config();
-const app=express();
-const cookieParser = require('cookie-parser')
-app.use(cookieParser())
-app.use(express.json());
-app.use(cors());
+const { userRouter } = require("./Routes/userrouter");
+const { doctorRouter } = require("./Routes/DoctorRouter");
+const { AppointmentRouter } = require("./Routes/AppointmentRouter");
+require("dotenv").config();
+const app = express();
+const port = process.env.PORT || 8080;
+const cookieParser = require("cookie-parser");
+const { timeSlot } = require("./Routes/bookingRoute");
+const { successResponse } = require("./helpers/successAndErrorResponse");
+const specs = require("./config/swaggerConfig");
 
-app.get('/',(req,res)=>{
-    res.send("Server is Working.....")
-})
-app.use('/user',userRouter);
+// Middleware
+app.use(cookieParser()); // Parse cookies
+app.use(express.json()); // Parse JSON bodies
+app.use(cors()); // Enable CORS
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs)); // Swagger documentation endpoint
 
+// Root route for checking server status
+app.get("/", (req, res) => {
+    res.status(200).json(successResponse(200, "Server is running successfully", null));
+});
 
-app.use(authenticator)
-app.use("/doctor",doctorRouter)
+// User routes
+app.use("/user", userRouter);
 
+// Doctor routes
+app.use("/doctor", doctorRouter);
 
-app.use("/appointment",AppointmentRouter)
+// Time slot routes
+app.use("/", timeSlot);
 
+// Appointment routes
+app.use("/appointment", AppointmentRouter);
 
-
-
-
-app.listen(process.env.port,async()=>{
+// Start the server
+app.listen(port, async () => {
     try {
         await connection;
-        console.log('Connected to db');
+        console.log("Connected to the database");
     } catch (error) {
-        console.log('Error while connecting to DB');
-    } 
-    console.log("Server Running on port "+process.env.port);
-})
+        console.log("Error while connecting to the database");
+    }
+    console.log("Server Running on port " + process.env.PORT);
+});

@@ -4,9 +4,27 @@ const {DoctorModel}=require('../Models/DoctorModel')
 
 const doctorRouter=express.Router()
 
-doctorRouter.get("/getDocID",async(req,res)=>{
+doctorRouter.get("/getparticulardoc/:id",async(req,res)=>{
+    try {
+        let id = req.params.id
+        let data = await DoctorModel.findById({_id:id});
+        res.send(data);
+    } catch (error) {
+        console.log(error);
+    }
+})
+doctorRouter.get("/getAllDoc",async(req,res)=>{
+    try {
+        let data = await DoctorModel.find()
+        res.json({msg:"success",data:data});
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+doctorRouter.get("/getDocID/:name",async(req,res)=>{
     try { 
-            let name=req.headers.name;
+            let name=req.params.name;
             let user=await DoctorModel.findOne({"name":name})
             res.send({"ID":user._id})
 
@@ -29,9 +47,9 @@ doctorRouter.post("/register",async(req,res)=>{
 })
 
 
-doctorRouter.delete("/delete",async(req,res)=>{
+doctorRouter.delete("/delete/:id",async(req,res)=>{
     try {
-        let id=req.query.id;
+        let id=req.params.id;
         let user=await DoctorModel.findByIdAndDelete({_id:id});
         res.send({"mess":"Doctor Deleted"})
     } catch (error) {

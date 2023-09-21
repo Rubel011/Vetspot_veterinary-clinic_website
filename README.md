@@ -4,7 +4,7 @@
   <img src="frontend/images/Blue Pet Care Clinic Business Logo.png" alt="html" width="200" height="100"/>
   <br>
   <br>
-  <p>The Veterinary System Website is a comprehensive solution designed to streamline and optimize the operations of a veterinary clinic. It offers features such as patient management, appointment scheduling, billing and invoicing, inventory management, and reporting and analytics. With a user-friendly interface, this system aims to enhance efficiency and effectiveness in veterinary care. Refer to the documentation for installation and usage instructions. Contributions from the community are welcome. </p>
+  <p>Vetspot is designed to streamline and optimize the operations of a veterinary clinic. It offers features such as patient management, appointment scheduling, billing and invoicing, inventory management, and reporting and analytics. With a user-friendly interface, this system aims to enhance efficiency and effectiveness in veterinary care. Refer to the documentation for installation and usage instructions. Contributions from the community are welcome. </p>
   <br>
 </div>
 
@@ -38,7 +38,7 @@
 ### Clone this Project
 
 ```
-https://github.com/atir09/spicy-bushes-5520.git
+https://github.com/Rubel011/Vetspot_veterinary-clinic_website.git
 ```
 
 ### Install npm Packages
@@ -54,23 +54,23 @@ cd Backend
 
 ### Run Server
 ```javascript
-npx nodemon index.js
+npm run server
 ```
 ### Runs the project in the development mode
 
-[http://localhost:1500](http://localhost:1500)
+[http://localhost:8080](http://localhost:8080)
 
 
 ## Run
 
 To run this application, you have to set your own environmental variables. For security reasons, some variables have been hidden from view and used as environmental variables with the help of dotenv package. Below are the variables that you need to set in order to run the application:
 
-- **port** : this is a port of website server
-- mongoUrl: this is the connection string of your MongoDB Atlas database.
+- **PORT** : this is a port of website server
+- **mongoUrl**: this is the connection string of your MongoDB Atlas database.
 
-- **GMAIL_EMAIL**, **GMAIL_PASSWORD** : the email and password given to nodemailer to send/receive the email. Please put a real email and password here because you will receive the messages sent from the contact us form on this email.
+- **EMAIL_ID**, **GOOGLEKEY** : the email and password given to nodemailer to send/receive the email. Please put a real email and password here because you will receive the messages sent from the contact us form on this email.
 
-- **ADMIN_EMAIL**, **ADMIN_PASSWORD** : the email and password used to log into the admin panel using AdminBro. You can put any email and password here.
+- **JWT_SECRET**, **REFRESH_TOKEN_SECRET** : this is the for the access token and refresh token using jwt and we need to set the secret key for that.
 
 - **redis_url** : Use a secure and unique method to generate the Redis URL for secure connection and data storage.
 
@@ -88,6 +88,10 @@ To run this application, you have to set your own environmental variables. For s
    
    
 ## API Endpoints
+  #### Swagger-UI
+```
+GET /api-docs
+```
    #### Welcome
 ```javascript
 GET  /
