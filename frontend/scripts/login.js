@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", function (event) {
                     localStorage.setItem("userDetails", JSON.stringify(res.data))
                     Swal.fire(
                         'Good job!',
-                        'Successfully LoggedIn',
+                        'Successfully LoggedIn ',
                         'success'
                     )
                     setTimeout(() => {
@@ -82,7 +82,7 @@ signupForm.addEventListener("submit", function (event) {
                 if (res.success) {
                     Swal.fire(
                         'Good job!',
-                        'Successfully Registered',
+                        'User Successfully Registered',
                         'success'
                     )
                     setTimeout(() => {

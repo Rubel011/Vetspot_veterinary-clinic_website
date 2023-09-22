@@ -2,17 +2,6 @@ let globalData = [];
 let url = "http://54.198.95.171:8080";
 let card_section = document.querySelector("#card-section");
 
-// let clicked_service = localStorage.getItem("clicked_service");
-
-// let user_name = localStorage.getItem("user_name") || "User";
-
-// if(user_name=="User"){
-//   alert("Please login first");
-//   window.location.href="./loginsignup.html"
-// }
-
-// console.log(clicked_service);
-
 function getWorkers() {
   fetch(`${url}/doctor/getAllDoc`,{ headers: {
     Authorization: localStorage.getItem("token")
