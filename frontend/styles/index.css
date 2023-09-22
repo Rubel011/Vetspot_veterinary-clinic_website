@@ -65,7 +65,7 @@
     font-weight: 300;
 }
 
-.hero-section-div a {
+.redirect_btn {
     background: linear-gradient(to right,  #f79256 0%,#4FC3F7 100%);
     width: 320px;
     padding: 20px;
@@ -399,7 +399,7 @@
         padding: 0 40px;
     }
 
-    .hero-section-div a {
+    .redirect_btn {
         text-align: center;
         margin: 40px auto;
     }
@@ -470,7 +470,7 @@
         line-height: 24px;
     }
 
-    .hero-section-div a {
+    .redirect_btn {
         width: 260px;
         padding: 16px 10px;
         border-radius: 6px;
@@ -532,7 +532,7 @@
         line-height: 22px;
     }
 
-    .hero-section-div a {
+    .redirect_btn {
         width: 200px;
         padding: 16px 10px;
         border-radius: 6px;
@@ -592,7 +592,7 @@
         line-height: 22px;
     }
 
-    .hero-section-div a {
+    .redirect_btn {
         width: 180px;
         padding: 16px 10px;
         border-radius: 6px;

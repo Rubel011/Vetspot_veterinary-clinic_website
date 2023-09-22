@@ -1,134 +1,114 @@
-document.getElementById("signup-toggle").addEventListener("click", function(){
+document.getElementById("signup-toggle").addEventListener("click", function () {
     document.getElementById("login-form").classList.remove("active");
     document.getElementById("signup-form").classList.add("active");
 });
 
-document.getElementById("login-toggle").addEventListener("click", function(){
+document.getElementById("login-toggle").addEventListener("click", function () {
     document.getElementById("signup-form").classList.remove("active");
     document.getElementById("login-form").classList.add("active");
 });
 
-// import Swal from 'sweetalert2'
-
-// CommonJS
-// const Swal = require('sweetalert2')
-
+let url = "http://54.198.95.171:8080"
 const loginForm = document.getElementById("login-form");
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault(); 
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     const usernameInput = document.getElementById("loginemail");
     // const emailInput = document.querySelector('input[name="email"]');
     const passwordInput = document.getElementById("loginPassword");
-const username = usernameInput.value;
+    const email = usernameInput.value;
     // const email = emailInput.value;
     const password = passwordInput.value;
-    const data = {email: username, password: password};
+    const data = { email: email, password: password };
     console.log(data)
-    if( password && username!=""){
-        fetch("https://veterinary-system.onrender.com/user/login", {
+    if (password && username != "") {
+        fetch(`${url}/user/login`, {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         })
-        .then(res=>res.json())
-            .then(res=>{
-              
-                localStorage.setItem("token",res.Token)
-                if(res.err){
-                    // alert(res.err)
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'please check details',
-                        footer: '<a href="">Why do I have this issue?</a>'
-                      })
-                }else{
-                    // alert(res.success)
-                    localStorage.setItem("userDetails",JSON.stringify(res.User))
+            .then(res => res.json())
+            .then(res => {
+                console.log(res);
+                localStorage.setItem("token", res.accessToken)
+                if (res.success) {
+                    localStorage.setItem("userDetails", JSON.stringify(res.data))
                     Swal.fire(
                         'Good job!',
                         'Successfully LoggedIn',
                         'success'
-                      )
-                      setTimeout(()=>{
-                        window.location.href="index.html"
-                      },1000)
+                    )
+                    setTimeout(() => {
+                        window.location.href = "index.html"
+                    }, 1000)
 
-                   
+
+                } else {
+                    errorMessage(res.message)
                 }
             })
-        .catch(error => {
-            console.error(error);
-            alert("Invalid Credentials")
-        });
-    }else{
-        // alert("please fill all details")
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'please fill all details',
-            footer: '<a href="">Why do I have this issue?</a>'
-          })
+            .catch(error => {
+                console.error(error);
+                alert("Invalid Credentials")
+            });
+    } else {
+        errorMessage('please fill all details')
     }
- 
+
 });
+
 
 const signupForm = document.getElementById("signup-form");
 
-signupForm.addEventListener("submit", function(event) {
-    event.preventDefault(); 
+signupForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     const usernameInput = document.getElementById("username");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("Password");
-const username = usernameInput.value;
+    const username = usernameInput.value;
     const email = emailInput.value;
     const password = passwordInput.value;
-    const data = {name: username, email: email, password: password};
+    const data = { name: username, email: email, password: password };
     console.log(data)
-    if(email && password && username!=""){
-        fetch("https://veterinary-system.onrender.com/user/register", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
-    })
-    .then(res=>res.json())
-            .then(res=>{
+    if (email && password && username != "") {
+        fetch(`${url}/user/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(res => {
                 console.log(res)
-                if(res){
-                    // alert(res.msg)
+                if (res.success) {
                     Swal.fire(
                         'Good job!',
                         'Successfully Registered',
                         'success'
-                      )
-                      setTimeout(()=>{
-                          window.location.href="login.html"
-                      },1000)
-                }else{
-                    // alert(res.message)
-                    
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'User Already Exists',
-                        footer: '<a href="">Why do I have this issue?</a>'
-                      })
+                    )
+                    setTimeout(() => {
+                        document.getElementById("signup-form").classList.remove("active");
+                        document.getElementById("login-form").classList.add("active");
+                    }, 1000)
+                } else {
+                    errorMessage(res.message)
                 }
-                
+
             })
-    .catch(error => {
-       
-        console.error(error);
-    });
-    }else{
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'please fill all details',
-            footer: '<a href="">Why do I have this issue?</a>'
-          })
-        // alert("please fill all details")
+            .catch((error) => {
+                console.error(error);
+            });
+    } else {
+        errorMessage('please fill all details')
     }
-    
+
 });
+
+
+function errorMessage(text) {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: text,
+        footer: '<a href="">Why do I have this issue?</a>'
+    })
+}

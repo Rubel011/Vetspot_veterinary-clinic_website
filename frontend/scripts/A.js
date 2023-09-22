@@ -1,5 +1,5 @@
 let globalData = [];
-
+let url = "http://54.198.95.171:8080";
 let card_section = document.querySelector("#card-section");
 
 // let clicked_service = localStorage.getItem("clicked_service");
@@ -14,7 +14,7 @@ let card_section = document.querySelector("#card-section");
 // console.log(clicked_service);
 
 function getWorkers() {
-  fetch(`https://veterinary-system.onrender.com/doctor/getAllDoc`,{ headers: {
+  fetch(`${url}/doctor/getAllDoc`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())
