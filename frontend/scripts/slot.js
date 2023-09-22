@@ -1,6 +1,6 @@
 let profId = localStorage.getItem("profId");
 // console.log(profId);
-
+let url = "http://54.198.95.171:8080"
 // pop up javascript
 
 const confirmBtn = document.getElementById("btn-65");
@@ -55,7 +55,7 @@ console.log(arr);
 
 //
 function getData() {
-  fetch(`https://veterinary-system.onrender.com/gettime/${profId}`,{ headers: {
+  fetch(`${url}/gettime/${profId}`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())
@@ -145,7 +145,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
   };
   console.log(obj);
   try {
-    let result = await fetch(`https://veterinary-system.onrender.com/uptime`, {
+    let result = await fetch(`${url}/uptime`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -168,7 +168,7 @@ document.getElementById("yes-btn").addEventListener("click", async () => {
 // getting the particular persons data
 
 function getWorkerInfo() {
-  fetch(`https://veterinary-system.onrender.com/doctor/getparticulardoc/${profId}`,{ headers: {
+  fetch(`${url}/getparticulardoc/${profId}`,{ headers: {
     Authorization: localStorage.getItem("token")
 }})
     .then((res) => res.json())

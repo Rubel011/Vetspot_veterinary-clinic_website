@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VetSpot | doctor page</title>
-    <link rel="stylesheet" href="./styles/doctor.css" />
-    <link rel="shortcut icon" href="./images/Vetspotlogo.jpg" type="image/x-icon">
-  </head>
-  <body>
-    <!-- use nav here -->
-    <br>
-    <br>
-    <br>
-     <!-- use nav here -->
 
-    <div id="container">
-      <div id="dashboard-btn">
-        <button class="ancer-btn" onclick="handleFilterClick(event)">Cat</button>
-        <button class="ancer-btn" onclick="handleFilterClick(event)">Dog</button>
-        <button class="ancer-btn" onclick="handleFilterClick(event)">Cow</button>
-        <button class="ancer-btn" onclick="handleFilterClick(event)">Emergency</button>
-      </div>
-      <div id="card-section">
-       <!-- data from backend -->
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetSpot | doctor page</title>
+  <link rel="stylesheet" href="./styles/doctor.css" />
+  <link rel="shortcut icon" href="./images/Vetspotlogo.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div id="navbar"></div>
+  <br>
+  <br>
+  <br>
+  <!-- use nav here -->
+
+  <div id="container">
+    <div id="dashboard-btn">
+      <button class="ancer-btn" onclick="handleFilterClick(event)">Cat</button>
+      <button class="ancer-btn" onclick="handleFilterClick(event)">Dog</button>
+      <button class="ancer-btn" onclick="handleFilterClick(event)">Cow</button>
+      <button class="ancer-btn" onclick="handleFilterClick(event)">Emergency</button>
     </div>
-  </body>
+    <div id="card-section">
+      <!-- data from backend -->
+    </div>
+  </div>
+    <!-- </footer>  -->
+	<div id="footer"></div>
+</body>
 </html>
+<!-- <script src="./scripts/navbar.js" type="module"></script> -->
 <script src="./scripts/doctor.js"></script>

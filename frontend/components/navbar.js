@@ -1,6 +1,5 @@
 // const dd=require("../admin.html")
 const navbar = () => {
-    
     return `
     <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" style="background: linear-gradient(to right,#1976D2,#4FC3F7); padding-right: 0 40px; display: flex; justify-content: space-between;">
     <div class="flex">
@@ -28,10 +27,10 @@ const navbar = () => {
                     <h4 id="userName"  style=" padding: 6px 20px; color: #fff; margin: 0 10px;"><h4/>
                     </li>
                     <li class="nav-item">
-                        <a  id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
+                        <a  id="loginbtn" class="btn" style="background-color: #d39c78; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a  id="adminbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Admin</a>
+                        <a  id="adminbtn" class="btn" style="background-color: #d39c78; padding: 6px 20px; color: #fff; margin: 0 10px;">Admin</a>
                     </li>
                 
                    

@@ -8,9 +8,10 @@ var totaluser = document.getElementById("totaluser")
 var dtotaluser = document.getElementById("dtotaluser")
 let todos = [];
 let dtodos = [];
+let url = "http://54.198.95.171:8080";
 // Retrieve todos from API and display them in the table
 function getTodos() {
-    fetch('https://veterinary-system.onrender.com/user/all', {
+    fetch(`${url}/user/all`, {
         method: 'GET',
         //  credentials: 'same-origin' 
         headers: {
@@ -57,7 +58,7 @@ todosTable.addEventListener('click', (event) => {
     if (event.target.classList.contains('deleteTodoBtn')) {
         const todoId = (event.target.dataset.id);
         // console.log(localStorage.getItem("token"));
-        fetch(`https://veterinary-system.onrender.com/user/delete/${todoId}`, {
+        fetch(`${url}/user/delete/${todoId}`, {
             method: 'DELETE',
             // credentials: 'include' ,
             headers: {
@@ -113,7 +114,7 @@ loginForm.addEventListener('submit', function (event) {
     // Perform login logic here...
     // ...
     if (email && password != "") {
-        fetch("https://veterinary-system.onrender.com/user/register", {
+        fetch(`${url}/user/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formDataObject)
@@ -214,7 +215,7 @@ function appointmentdiv() {
 
 //////doctor get all the data
 function getDoctorTodos() {
-    fetch('https://veterinary-system.onrender.com/doctor/getAllDoc', {
+    fetch(`${url}/doctor/getAllDoc`, {
         method: 'GET',
         //  credentials: 'same-origin' 
         headers: {
@@ -261,7 +262,7 @@ doctortodosTable.addEventListener('click', (event) => {
     if (event.target.classList.contains('deleteTodoBtn')) {
         const todoId = (event.target.dataset.id);
         // console.log(localStorage.getItem("token"));
-        fetch(`https://veterinary-system.onrender.com/doctor/delete/${todoId}`, {
+        fetch(`${url}/doctor/delete/${todoId}`, {
             method: 'DELETE',
             // credentials: 'include' ,
             headers: {
@@ -318,7 +319,7 @@ loginDForm.addEventListener('submit', function (event) {
     // Perform login logic here...
     // ...
     if (email && gender && img && age && experience && specialization != "") {
-        fetch("https://veterinary-system.onrender.com/doctor/register", {
+        fetch(`${url}/doctor/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json", Authorization: localStorage.getItem("token") },
             body: JSON.stringify(formDataObject)
