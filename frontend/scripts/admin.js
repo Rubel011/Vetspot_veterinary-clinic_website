@@ -8,7 +8,7 @@ var totaluser = document.getElementById("totaluser")
 var dtotaluser = document.getElementById("dtotaluser")
 let todos = [];
 let dtodos = [];
-let url = "http://54.198.95.171:8080";
+let url = "https://vetspot.onrender.com";
 // Retrieve todos from API and display them in the table
 function getTodos() {
     fetch(`${url}/user/all`, {

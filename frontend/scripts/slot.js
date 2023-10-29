@@ -1,6 +1,6 @@
 let profId = localStorage.getItem("profId");
 // console.log(profId);
-let url = "http://54.198.95.171:8080"
+let url ="https://vetspot.onrender.com"
 // pop up javascript
 
 const confirmBtn = document.getElementById("btn-65");

@@ -1,5 +1,5 @@
 let globalData = [];
-let url = "http://54.198.95.171:8080";
+let url = "https://vetspot.onrender.com";
 let card_section = document.querySelector("#card-section");
 
 // let clicked_service = localStorage.getItem("clicked_service");
