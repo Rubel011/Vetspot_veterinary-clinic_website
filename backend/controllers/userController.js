@@ -1,14 +1,12 @@
-// Import necessary modules and configurations
 const { UserModel } = require("../Models/UserModel");
 const { sendEmail } = require("../helpers/sendEmail");
-const bcrypt = require("bcrypt"); // Import bcrypt for password hashing
+const bcrypt = require("bcrypt"); 
 const jwt = require('jsonwebtoken');
 const dotenv = require("dotenv");
 dotenv.config();
 const { successResponse, errorResponse } = require("../helpers/successAndErrorResponse");
 
-// Get deployment URL and secret key from environment variables or use default values
-const deploy_url = process.env.deploy_link || "http://localhost:8080";
+const FRONTEND_DEPLOYED_URL = process.env.FRONTEND_DEPLOYED_URL || "http://localhost:8080";
 const JWT_SECRET = process.env.JWT_SECRET || "masai-secret";
 const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET || "masai-refresh-secret";
 
@@ -47,7 +45,7 @@ module.exports.updateUserById = async (req, res) => {
         }
         res.status(200).json(successResponse(200, "User updated successfully", updatedUser));
     } catch (error) {
-        res.status(500).json(errorResponse(500,error.message));
+        res.status(500).json(errorResponse(500, error.message));
     }
 }
 
@@ -88,7 +86,7 @@ module.exports.registerNewUser = async (req, res) => {
             <p>Happy Exploring!</p>
             <p>Best regards,</p>
             <p>The Vetspot Team</p>
-            <a href="${deploy_url}/login">Proceed to Login</a>
+            <a href="${FRONTEND_DEPLOYED_URL}/login">Proceed to Login</a>
           </body>
         </html>
       `,

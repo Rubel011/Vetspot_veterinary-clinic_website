@@ -8,7 +8,7 @@ document.getElementById("login-toggle").addEventListener("click", function () {
     document.getElementById("login-form").classList.add("active");
 });
 
-let url = "http://54.198.95.171:8080"
+let url = "https://vetspot.onrender.com"
 const loginForm = document.getElementById("login-form");
 
 loginForm.addEventListener("submit", function (event) {

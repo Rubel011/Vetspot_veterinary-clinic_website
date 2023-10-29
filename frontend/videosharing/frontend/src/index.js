@@ -22,7 +22,7 @@ let navRedirect = document.getElementById("navredirect");
 let viewApp = document.getElementById("viewApp");
 let adminbtn = document.getElementById("adminbtn");
 let videoCall = document.getElementById("videoCall");
-let url = "http://54.198.95.171:8080";
+let url = "https://vetspot.onrender.com";
 
 // Home redirect
 logo.addEventListener("click", () => {

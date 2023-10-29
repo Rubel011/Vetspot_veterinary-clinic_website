@@ -1,5 +1,5 @@
 const myform = document.getElementById("form");
-let url = "http://54.198.95.171:8080";
+let url = "https://vetspot.onrender.com";
 myform.addEventListener("submit", (event) => {
     event.preventDefault();
 
